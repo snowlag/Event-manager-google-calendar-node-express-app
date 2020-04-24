@@ -81,12 +81,7 @@ function addEvents(auth , events){
     console.log('Event created: %s', event.htmlLink);
   });
 }
-
-
-
-
-
-
+//---------------------Route for displaying form page----------------------------------------------------
 router.get("/code", function(req , res){
   fs.readFile(TOKEN_PATH, (err, token) => {
     if (err){
@@ -103,7 +98,7 @@ router.get("/code", function(req , res){
   });
   
 })
-
+//----------------------------Post Route for validating and getting Token---------------------------------------------
 router.post("/code", function(req, res){
    var code = req.body.code;
 
@@ -128,7 +123,7 @@ router.post("/code", function(req, res){
     res.redirect("/events")
   });
 })
-
+//--------------------------------------Route for Displaying Events-------------------------------------
 router.get("/events", function(req , res){
 fs.readFile(TOKEN_PATH, function(err, token){
     if (err){
@@ -146,11 +141,11 @@ setTimeout(function(){
 }, 2000)
 
 })
-
+//--------------------------Route for displaying create event page---------------------------------------------------
 router.get("/events/create", function(req , res){
   res.render("newEvent")
 })
-
+//-------------------------Post request to add event to Calendar -------------------------------------------------
 router.post("/events", function(req , res){
   //Create Event Object
   var event = {
@@ -178,6 +173,7 @@ router.post("/events", function(req , res){
       ],
     },
   };
+  //We need to Initialize oath2client again, so we read token file again
   fs.readFile(TOKEN_PATH, function(err, token){
     if (err){
       console.log("User Sign Up is required to create token.") 
@@ -190,7 +186,7 @@ router.post("/events", function(req , res){
     }
   })
 })
-
+//----------------------Send JSON Format of Events--------------------------------------------------------------
 router.get("/events/getJSON" , function(req, res){
   fs.readFile(TOKEN_PATH, function(err, token){
     if (err){
@@ -202,6 +198,7 @@ router.get("/events/getJSON" , function(req, res){
       listEvents(oAuth2Client);
     }
 });
+//Create Event.json to store events in json format
   fs.writeFile("./events.json", JSON.stringify(dataEvents) , function(err){
     if(err){
       console.log("Error Writing to JSON File : "+err);
@@ -216,15 +213,3 @@ router.get("/events/getJSON" , function(req, res){
 })
 
 module.exports = router;
-
-/*
-dateTime: "2020-04-30T19:00:00+05:30"
-},
-end: {
-dateTime: "2020-04-30T20:30:00+05:30"
-},
-*/
-
-/*
-
-*/

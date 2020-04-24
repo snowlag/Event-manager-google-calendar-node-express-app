@@ -209,6 +209,32 @@ Add these Event in user's Calendar
     });
     }
 ```
+- In oder to provide user with JSON Format of the file we we take the event object and use ```JSON.stringify(object) ``` function to convert javascript object to JSON format.
+```
+  fs.writeFile("./events.json", JSON.stringify(dataEvents) , function(err){
+    if(err){
+      console.log("Error Writing to JSON File : "+err);
+    }
+    else{
+      console.log("Added event on event.json")
+    }
+  })
+  setTimeout(function(){
+    res.sendfile("./events.json")
+  },2000)
+})
+```
+### These above Functions will be called in RESTful routes 
+- -/ => Home page ( GET )
+- -/code => Authorisation Code page form ( GET )
+- -/code => Validating auth Code and getting token (POST)
+- -/events => View event page (GET)
+- -/events/create => Create new event page (GET)
+- -/events => Adding Event to Calendar (POST)
+- Note
+ - User cannot use same token for more than 1 hour. Delete token file if the api return with error and sign up again.
+ - Any errors like giving wrong time range of event, api errors are handeled in console so it will not be visible on page.
+
     
    
 
