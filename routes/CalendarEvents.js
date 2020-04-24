@@ -26,19 +26,15 @@ fs.readFile('./credentials.json', (err, content) => {
 });
 }
 
-
-
+//Added Credential details to OAth2Client
 function authorize(credentials) {
   const {client_secret, client_id, redirect_uris} = credentials.installed;
       oAuth2Client = new google.auth.OAuth2(
       client_id, client_secret, redirect_uris);
-
-  // Check if we have previously stored a token.
-  
-}
-
+  }
+//Load Client details
+//Check if there is any previously stored token
 readCredentials();
-
 fs.readFile(TOKEN_PATH, function(err, token){
   if (err){
     console.log("User Sign Up is required to create token.") 
