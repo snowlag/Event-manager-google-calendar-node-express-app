@@ -42,15 +42,11 @@
 ## Understanding the File structure
 - index.js is the entry point of the Application
 - routes file contains the js file having all the Routes defined.
-      - Including it in index.js
+- Including it in index.js
         ```
         var home = require("./routes/CalendarEvents");
         app.use(home);
          ```
-
- 
-    
-
 - public Directory contains the css stylesheets
      - Including it in index.js.
         ```
