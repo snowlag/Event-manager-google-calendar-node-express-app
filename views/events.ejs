@@ -1,0 +1,43 @@
+<html>
+    <head>
+      <title>
+        Events Manager
+      </title>
+      <link rel="stylesheet" href="/stylesheets/index.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+            <h1 id="event-head" class="text-center">Google Events</h1>
+            <% if (events.length) {  %>
+            
+            <h2 class="text-center">Upcoming 10 Events</h2>
+            <div class="buttonDiv">
+                <a href="/events/create" class="btn btn-primary">Create Event</a>
+            </div>
+            <div class="events">
+             <ol>
+                <%   events.map((event, i) => {  %>
+                    <%     const start = event.start.dateTime || event.start.date; %>
+                        <li>
+                            <%= start %> <strong><%= event.summary %></strong>
+                        </li>
+                    <%   });  %>
+                    <%  } else {  %>
+                    <h2>No Upcoming Events</h2>
+                    <%  }  %>
+             </ol>
+            </div>
+            <div class="buttonDiv">
+                <a href="/events/getJSON" class="btn btn-info">Get JSON</a>
+            </div>
+            <div class="note">
+                <h4>Fetching data from api some time takes time so If you have created new Event refesh the page one or two times.</h4>
+            </div>
+
+        </div>
+    </body>
+</html>
+
+            

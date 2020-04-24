@@ -1,0 +1,31 @@
+<html>
+    <head>
+      <title>
+        Events Manager
+      </title>
+      <link rel="stylesheet" href="/stylesheets/index.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+    <body>
+      <div class="container">
+        <h1 class="text-center">Integrate your Calendar API with us to view and add events in your Google Calendar</h1>
+        <div id="inst">
+        <h2> 1) Sign up using your Google Account. </h2>
+        <h2> 2) You will be redirected to Google OathPlayground Page</h2>
+        <h2> 3) Copy the Authorisation Code and paste it here.</h2>
+        <a class="btn btn-warning" href ="<%= authUrl %>" target="_blank">Sign Up</a>
+        </div>
+        <div class="formpage">
+          <form action="/code" method="POST" class="ui form">
+            <div class="field">
+              <input type ="text" name= "code" placeholder="Paste auth code">
+            </div>
+            <div class="field">
+             <input class="btn btn-success" value="Verify" type ="submit">
+            </div> 
+          </form>
+      </div>
+    </div>
+  </body>
+</html>

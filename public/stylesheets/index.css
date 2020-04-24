@@ -1,0 +1,35 @@
+#mainHeader{
+    text-align: center;
+    margin-top: 10%
+
+}
+#gstarted{
+    text-align: center;
+    margin-top: 4%;
+}
+#inst{
+    text-align: center;
+}
+.formpage{
+    text-align: center;
+    margin-top: 5%;
+}
+.events{
+ margin-top: 4%;
+ font-size: 22px;
+ margin-left: 28%;
+
+}
+#event-head{
+    font-size: 70px;
+}
+.buttonDiv{
+    text-align: center;
+    margin-top: 4%;
+
+
+}
+.note{
+    text-align : center;
+    margin-top: 2%;
+}
