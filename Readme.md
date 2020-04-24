@@ -46,8 +46,9 @@
         ```
         var home = require("./routes/CalendarEvents");
         app.use(home);
+         ```
 
-        ```
+ 
     
 
 - public Directory contains the css stylesheets
