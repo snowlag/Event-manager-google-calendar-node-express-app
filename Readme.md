@@ -233,7 +233,7 @@ Add these Event in user's Calendar
 - Note
  - User cannot use same token for more than 1 hour. Delete token file if the api return with error and sign up again.
  - Any errors like giving wrong time range of event, api errors are handeled in console so it will not be visible on page.
-
+### Local host Images
 - [Home page](/Pictures/homepage.png)
 - [Authorisation Code Form](/pictures/AuthCodeForm.png)
 - [Events Page](/pictures/events.png)
