@@ -1,6 +1,5 @@
 # Event-manager-google-calendar-node-express-app
-## This Node App allows user to sign in with Google Account and see their upcoming events, give Json format of the events and also interface to add new event in their Calendar
-## Get Started
+## This Node App allows user to sign in with Google Account and see their upcoming events, give Json format of the events and to add new event in their Calendar
 ### First Install all the Dependencies
 ```
  "dependencies": {
@@ -26,7 +25,7 @@
     - After creating project enable google Calendar api
     - Create Credentials by setting authorised redirect url to https://developers.google.com/oauthplayground
     - Copy Client id , Client Secret and redirect url.
-- After getting Client Credentials make a credential.json file having he client id, client secret and redirect url.
+- After getting Client Credentials, make a credential.json file having he client id, client secret and redirect url.
 ```
     {"installed":
         {
@@ -95,12 +94,12 @@
     
     ```
 ## Function for Google Calendar Api
-- Definig the Scope. Scope lets you decide how you are going to use api. Our aim is to read and write in users Calendar api. 
+- We define the scope. Scope lets you decide how you are going to use api. Our aim is to read and write in users Calendar api. 
 ```
 const SCOPES = ['https://www.googleapis.com/auth/calendar.events'];
 
 ```
-- First we read the Credentials of the the credential.json and then we pass it to authorise function which initializes google Oath2client.
+- We read the Credentials of the the credential.json and then we pass it to authorise function which initializes google Oath2client.
     ```
         // Load client secrets from a local file.
         function readCredentials(){
@@ -128,7 +127,7 @@ const SCOPES = ['https://www.googleapis.com/auth/calendar.events'];
 
     ```
 - Getting token.
-  -  We get token when user allow our application to access users calendar. Since we are doing these on local host user has copy the authorisation code paste it into our form. This is because google do not allow to set redirect url to local host.
+  -  We get token when user allow our application to access users calendar. Since we are doing these on local host,User has copy the authorisation code paste it into our form. This is because google do not allow to set redirect url to local host.
   - These function exchanges authorisation code for token and stores it in token.json file so that user will not have to sign up again and again.
   ```
     oAuth2Client.getToken(code, (err, token) => {
@@ -235,6 +234,12 @@ Add these Event in user's Calendar
  - User cannot use same token for more than 1 hour. Delete token file if the api return with error and sign up again.
  - Any errors like giving wrong time range of event, api errors are handeled in console so it will not be visible on page.
 
+- [Home page](/Pictures/homepage.png)
+- [Authorisation Code Form](/pictures/AuthCodeForm.png)
+- [Events Page](/pictures/events.png)
+- [JSON Format](/pictures/json.png)
+- [Google Sign Up page](/pictures/signup)
+- [Creating Event](/pictures/createevent.png)
     
    
 
