@@ -58,14 +58,13 @@ function listEvents(auth) {
     singleEvents: true,
     orderBy: 'startTime',
   }, function(err, res){
-    if (err) {
+      if (err) {
       console.log('The API returned an error: ' + err);
-
-    } 
-    else {
- dataEvents = res.data.items;
-   } 
-  })
+        } 
+     else {
+        dataEvents = res.data.items;
+     } 
+    })
 }
 
 function addEvents(auth , events){
