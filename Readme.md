@@ -232,11 +232,11 @@ Add these Event in user's Calendar
  - Any errors like giving wrong time range of event, api errors are handeled in console so it will not be visible on page.
 ### Local host Images
 - [Home page](/Pictures/homepage.png)
-- [Authorisation Code Form](/pictures/AuthCodeForm.png)
-- [Events Page](/pictures/events.png)
-- [JSON Format](/pictures/json.png)
-- [Google Sign Up page](/pictures/signup)
-- [Creating Event](/pictures/createevent.png)
+- [Authorisation Code Form](/Pictures/AuthCodeForm.png)
+- [Events Page](/Pictures/events.png)
+- [JSON Format](/Pictures/json.png)
+- [Google Sign Up page](/Pictures/signup)
+- [Creating Event](/Pictures/createevent.png)
     
    
 
