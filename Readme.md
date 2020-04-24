@@ -10,7 +10,7 @@
     "request": "^2.88.2"
   },
 ```
-- Install NodeJs and npm from [here] (https://www.npmjs.com/get-npm)
+- Install NodeJs and npm from [here](https://www.npmjs.com/get-npm)
 - Type the following Commands in terminal
 ```
     npm install body-parser
