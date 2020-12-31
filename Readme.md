@@ -11,13 +11,9 @@
   },
 ```
 - Install NodeJs and npm from [here](https://www.npmjs.com/get-npm)
-- Type the following Commands in terminal
+- Type the following Commands in terminal to install all dependencies
 ```
-    npm install body-parser
-    npm install ejs
-    npm install express
-    npm install googleapis
-    npm install request
+    npm install --save
 ```
 ### Get Client Credential File
 - You can quickly get credential file from [here](https://developers.google.com/calendar/quickstart/nodejs).
